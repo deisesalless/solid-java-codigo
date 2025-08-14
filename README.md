@@ -8,6 +8,9 @@ O SOLID é um conjunto de cinco princípios de design de software que ajudam a c
 > Uma classe deve ter apenas **uma única responsabilidade** e, portanto, apenas **uma razão para mudar**.
 > 
 > Exemplo: Ter uma classe NotaFiscal não é se concentrar tudo nela,  ela vai ter outras classes que fazem a sua responsabilidade e juntando todas as classes é obtido o resultado do processo de emissão de uma NotaFiscal.
+> - [Versão sem o **S** do SRP](https://github.com/deisesalless/solid-java-codigo/commit/a508ee9704a26aadb0219ff968490bbcb2c47101) – implementação sem aplicar o princípio da responsabilidade única.
+> - [S do SRP com implementação obrigatória de cálculo de bonificação](https://github.com/deisesalless/solid-java-codigo/commit/4706f8424d3345f27585c97c6bd9c6622b0da454) – evita bugs futuros por manutenção feita por outros desenvolvedores.
+> - [S do SRP padronizando bonificação](https://github.com/deisesalless/solid-java-codigo/commit/c5eef0b9953458e63e2eef5aab0fe59b04b16279) – todos os cargos recebem **0,00** por padrão e apenas os que sobrescrevem o método têm bonificação calculada.
 
 ---
 
