@@ -12,7 +12,8 @@ public class Srp {
         final List<Colaborador> colaboradores = List.of(
           new Colaborador("João", 5000, Cargo.DESENVOLVEDOR),
           new Colaborador("Maria", 6000, Cargo.ANALISTA),
-          new Colaborador("José", 7000, Cargo.GERENTE)
+          new Colaborador("José", 7000, Cargo.GERENTE),
+          new Colaborador("Ana", 300, Cargo.ESTAGIARIO)
         );
 
         final CalculaboraBonificacao calculaboraBonificacao = new CalculaboraBonificacao();

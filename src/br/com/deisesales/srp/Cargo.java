@@ -18,7 +18,10 @@ public enum Cargo {
         public double calculaBonificacao(double salarioBase) {
             return salarioBase * 0.1; // 10% para gerentes
         }
-    };
+    },
+    ESTAGIARIO;
 
-    public abstract double calculaBonificacao(double salarioBase);
+    public double calculaBonificacao(double salarioBase) {
+        return 0;
+    }
 }
