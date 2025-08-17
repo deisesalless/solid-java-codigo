@@ -1,6 +1,6 @@
 package br.com.deisesales.ocp_dip;
 
-public class Caixa {
+public final class Caixa {
     private final Correio correio;
     private final EmissorNf emissorNf;
     private final IntegraParaEstoque integraParaEstoque;
@@ -11,23 +11,27 @@ public class Caixa {
         this.integraParaEstoque = new IntegraParaEstoque();
     }
 
-    public Venda faturar(Venda venda) {
+    public Venda faturar(Venda venda, Transportadora transportadora) {
 
-        // verifica o calculo do frete
-        if (venda.getEstadoEntrega().equalsIgnoreCase("Parana")) {
-            venda.setFrete(25);
-        } else {
-            venda.setFrete(50);
-        }
+        /*
+        * Responsabilidade: Calcular frete
+        * atribuido a responsabilidade para a transportadora
+        * seguindo o princípio Open/Closed Principle (OCP)
+        * onde a classe Caixa não precisa ser modificada sendo FINAL
+        * e a lógica de cálculo de frete pode ser estendida usando a interface Transportadora
+        */
+        venda.setFrete(transportadora.calcularFrete(venda));
 
-        // verifica o calculo do desconto
-        if (venda.getTipoCliente().equals("PF")) {
-            venda.setDesconto(venda.getValorTotal() * 0.10);
-        } else if (venda.getTipoCliente().equals("PJ")) {
-            venda.setDesconto(venda.getValorTotal() * 0.05);
-        } else {
-            venda.setDesconto(venda.getValorTotal() * 0.02);
-        }
+        /*
+        * Responsabilidade: Calcular desconto
+        * atribuido a responsabilidade para o tipo de cliente
+        * seguindo o princípio Open/Closed Principle (OCP)
+        * onde a classe Caixa não precisa ser modificada sendo FINAL
+        * e a lógica de cálculo de desconto pode ser estendida usando a enum TipoCliente
+        */
+        venda.setDesconto(
+                venda.getTipoCliente().calcularDesconto(venda)
+        );
 
         System.out.println("Venda faturada");
 
