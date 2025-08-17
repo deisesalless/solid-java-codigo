@@ -11,7 +11,7 @@ public final class Caixa {
         this.integraParaEstoque = new IntegraParaEstoque();
     }
 
-    public Venda faturar(Venda venda, Transportadora transportadora) {
+    public Venda faturar(Venda venda, Transportadora transportadora, TabelaDesconto tabelaDesconto) {
 
         /*
         * Responsabilidade: Calcular frete
@@ -30,7 +30,7 @@ public final class Caixa {
         * e a lógica de cálculo de desconto pode ser estendida usando a enum TipoCliente
         */
         venda.setDesconto(
-                venda.getTipoCliente().calcularDesconto(venda)
+                tabelaDesconto.calcularDesconto(venda)
         );
 
         System.out.println("Venda faturada");

@@ -22,7 +22,7 @@ public class OcpDip {
 
         final Caixa caixa = new Caixa();
 
-        final Venda vendaFaturada = caixa.faturar(venda, new TransportadoraCORREIOS());
+        final Venda vendaFaturada = caixa.faturar(venda, new TransportadoraCORREIOS(), new TabelaPromocional());
 
         System.out.println("O desconto da venda é: " + vendaFaturada.getDesconto());
         System.out.println("O valor do frente da venda é: " + vendaFaturada.getFrete());
