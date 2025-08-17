@@ -50,3 +50,7 @@ O SOLID é um conjunto de cinco princípios de design de software que ajudam a c
 
 ## **S**, **O** e **D** juntos
 > - [Versão sem o **SOD** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/fdeea55ba0ebca32fb7a1ab386cdba96ec60bd5f) – implementação sem aplicar o princípio da responsabilidade única + princípio de aberto/fechado + princípio de inversão de dependência.
+> - [Versão com o **S** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/89b41ee834e641b28da1c7805e473c27b430d5f0) – comentando parte do código que enfatiza onde já possui a Responsabilidade Única.
+> - [Versão com o **O** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/1f1ceb441ffe0eaf314831874b573117f0ca35bf) – implementação de parte do código para o Princípio de Aberto/Fechado, alterando o if-else da classe Caixa para o uso de uma interface **Transportadora**.
+> - [Versão com o **O** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/6a7ba293e08c0569a12ff0bf4a8829b59a9cce29) – implementação de parte do código para o Princípio de Aberto/Fechado, alterando o venda.setDesconto() da classe Caixa para o uso de uma interface **TabelaDesconto**.
+> - [Versão com o **D** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/107212234d686798e6321112e655e2a5436a0d84) – implementação de parte do código para o Princípio de Inversão de Dependência, alterando os atributos da classe Caixa para o uso de uma interface **AcoesAposFaturamento**.
