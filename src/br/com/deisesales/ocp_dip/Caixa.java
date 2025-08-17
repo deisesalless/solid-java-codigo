@@ -31,6 +31,8 @@ public class Caixa {
 
         System.out.println("Venda faturada");
 
+        // Responsabilidade única: emitir nota fiscal, enviar email e integrar estoque
+        // seguindo o princípio Single Responsibility Principle (SRP)
         this.emissorNf.emitir(); // emitir nota fiscal
         this.correio.notificarCliente(); // disparar email para o cliente
         this.integraParaEstoque.integrar(); // dar baixa nos itens do estoque
