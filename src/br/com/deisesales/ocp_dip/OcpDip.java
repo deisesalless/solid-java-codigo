@@ -20,7 +20,10 @@ public class OcpDip {
 
         final Venda venda = new Venda("Deise Sales", TipoCliente.PF, "Parana", itens);
 
-        final Caixa caixa = new Caixa();
+        final Caixa caixa = new Caixa(
+                List.of(new EmissorNf(), new CorreioEletronico(),
+                        new IntegraParaEstoque(), new SeparadorDeProdutos())
+        );
 
         final Venda vendaFaturada = caixa.faturar(venda, new TransportadoraCORREIOS(), new TabelaPromocional());
 

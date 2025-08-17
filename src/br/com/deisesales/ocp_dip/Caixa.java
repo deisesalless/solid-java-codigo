@@ -1,14 +1,12 @@
 package br.com.deisesales.ocp_dip;
 
-public final class Caixa {
-    private final Correio correio;
-    private final EmissorNf emissorNf;
-    private final IntegraParaEstoque integraParaEstoque;
+import java.util.List;
 
-    public Caixa() {
-        this.correio = new Correio();
-        this.emissorNf = new EmissorNf();
-        this.integraParaEstoque = new IntegraParaEstoque();
+public final class Caixa {
+    private final List<AcoesAposFaturamento> acoesAposFaturamentoList;
+
+    public Caixa(List<AcoesAposFaturamento> acoesAposFaturamentoList) {
+        this.acoesAposFaturamentoList = acoesAposFaturamentoList;
     }
 
     public Venda faturar(Venda venda, Transportadora transportadora, TabelaDesconto tabelaDesconto) {
@@ -39,9 +37,7 @@ public final class Caixa {
          * Responsabilidade única: emitir nota fiscal, enviar email e integrar estoque
          * seguindo o princípio Single Responsibility Principle (SRP)
          */
-        this.emissorNf.emitir(); // emitir nota fiscal
-        this.correio.notificarCliente(); // disparar email para o cliente
-        this.integraParaEstoque.integrar(); // dar baixa nos itens do estoque
+        acoesAposFaturamentoList.forEach(AcoesAposFaturamento::executarAcao);
 
         return venda;
     }

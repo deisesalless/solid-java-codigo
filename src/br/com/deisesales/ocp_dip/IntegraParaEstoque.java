@@ -1,8 +1,10 @@
 package br.com.deisesales.ocp_dip;
 
-public class IntegraParaEstoque {
+public class IntegraParaEstoque implements AcoesAposFaturamento {
 
-    public void integrar() {
-        System.out.println("Enviando para o estoque do sistema XPTO...");
+
+    @Override
+    public void executarAcao() {
+        System.out.println("Atualização do estoque realizada com sucesso!");
     }
 }
