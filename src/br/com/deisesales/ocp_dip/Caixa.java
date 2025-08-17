@@ -3,6 +3,11 @@ package br.com.deisesales.ocp_dip;
 import java.util.List;
 
 public final class Caixa {
+    /*
+    * Responsabilidade: Lista de ações a serem executadas após o faturamento
+    * seguindo o princípio Dependency Inversion Principle (DIP)
+    * onde a classe Caixa depende de abstrações (interface AcoesAposFaturamento)
+    */
     private final List<AcoesAposFaturamento> acoesAposFaturamentoList;
 
     public Caixa(List<AcoesAposFaturamento> acoesAposFaturamentoList) {
