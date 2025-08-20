@@ -1,21 +1,25 @@
 package br.com.deisesales.lsp;
 
 public class Conta {
-    protected double saldo;
+    protected final ManipuladorSaldo manipuladorSaldo;
+
+    public Conta() {
+        this.manipuladorSaldo = new ManipuladorSaldo();
+    }
 
     public double getSaldo() {
-        return saldo;
+        return manipuladorSaldo.getSaldo();
     }
 
     public void depositar(int valor) {
-        this.saldo += valor;
+        manipuladorSaldo.depositar(valor);
     }
 
     public void sacar(int valor) {
-        this.saldo -= valor;
+        manipuladorSaldo.sacar(valor);
     }
 
     public void render() {
-        this.saldo += this.saldo * 0.05;
+        manipuladorSaldo.render(0.05);
     }
 }

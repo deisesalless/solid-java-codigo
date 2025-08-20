@@ -4,6 +4,6 @@ public class ContaPremium extends Conta {
 
     @Override
     public void render() {
-        this.saldo += this.saldo * 0.10;
+        this.manipuladorSaldo.render(0.1);
     }
 }
