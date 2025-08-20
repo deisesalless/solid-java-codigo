@@ -66,3 +66,4 @@ O SOLID é um conjunto de cinco princípios de design de software que ajudam a c
 
 ## I - Interface Segregation Principle
 > - [Versão sem o **I** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/c03ddfb0ede8f15e59dc8d307ac5caf0e4a45b1c) – implementação sem aplicar o princípio da responsabilidade única + princípio de aberto/fechado + princípio de inversão de dependência.
+> - > - [Versão com o **I** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/cf6e7352a05aac95c1dbf32b6f539c790d042a48) – implementado a regra I do SOLID, que define que é melhor ter interface específica para o que se precisa, ou seja, foi preciso criar uma interface especifica e implementar a comissão somente para os cargos que exigem pagamento de comissão, assim os casos que não precisam, não precisam implementar o método e acrescentar 0,00 na comissão.
