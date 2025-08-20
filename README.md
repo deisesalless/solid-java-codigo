@@ -55,10 +55,14 @@ O SOLID é um conjunto de cinco princípios de design de software que ajudam a c
 > - [Versão com o **O** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/6a7ba293e08c0569a12ff0bf4a8829b59a9cce29) – implementação de parte do código para o Princípio de Aberto/Fechado, alterando o venda.setDesconto() da classe Caixa para o uso de uma interface **TabelaDesconto**.
 > - [Versão com o **D** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/107212234d686798e6321112e655e2a5436a0d84) – implementação de parte do código para o Princípio de Inversão de Dependência, alterando os atributos da classe Caixa para o uso de uma interface **AcoesAposFaturamento**.
 
-
 ---
 
 ## L - Liskov Substitution Principle
 > - [Versão sem o **L** do LSP](https://github.com/deisesalless/solid-java-codigo/commit/4aa410822bfa2070f9b6dd83ec14988c66629f19) – implementação sem aplicar o princípio Liskov de substituição.
 > - [Versão com o **L** do LSP - exemplo 1](https://github.com/deisesalless/solid-java-codigo/commit/a3b7f8a23a3cb2cb46f8ac9803936cd4238cc760) – a classe base é Conta, porém as classes de implementação sendo as classes ContaPremium e ContaUniversitaria, podem ser substituídas pela classe Conta, e as classes filhas podem ser substituídas entre si, nesse caso está sendo usado o principio L e parte do OCP (Open Close Principle).
 > - [Versão com o **L** do LSP - exemplo 2](https://github.com/deisesalless/solid-java-codigo/commit/a3b7f8a23a3cb2cb46f8ac9803936cd4238cc760) – nesse caso também está sendo usado parte do OCP (Open Close Principle) porque estou definindo uma interface como forma de entrada, ou seja, deixando o método aberto para entrada de vários tipos de manipulador de conta sendo que precisa apenas ser do tipo MANIPULADOR DE CONTA não importando se é comum, premium ou sem rendimento.
+
+---
+
+## I - Interface Segregation Principle
+> - [Versão sem o **I** do SOLID](https://github.com/deisesalless/solid-java-codigo/commit/c03ddfb0ede8f15e59dc8d307ac5caf0e4a45b1c) – implementação sem aplicar o princípio da responsabilidade única + princípio de aberto/fechado + princípio de inversão de dependência.
