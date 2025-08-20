@@ -9,9 +9,14 @@ public class Lsp {
     }
 
     public void executar() {
-        final var conta1 = new Conta();
-        final var conta2 = new ContaPremium();
-        final var conta3 = new ContaUniversitaria();
+
+        final ManipuladorSaldo manipuladorComum = new ManipuladorSaldoComum();
+        final ManipuladorSaldo manipuladorPremium = new ManipuladorSaldoPremium();
+        final ManipuladorSaldo manipuladorSemRendimento = new ManipuladorSaldoSemRendimento();
+
+        final var conta1 = new Conta(manipuladorComum);
+        final var conta2 = new Conta(manipuladorPremium);
+        final var conta3 = new Conta(manipuladorSemRendimento);
 
         conta1.depositar(100);
         conta2.depositar(100);

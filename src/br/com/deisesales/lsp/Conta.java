@@ -3,8 +3,8 @@ package br.com.deisesales.lsp;
 public class Conta {
     protected final ManipuladorSaldo manipuladorSaldo;
 
-    public Conta() {
-        this.manipuladorSaldo = new ManipuladorSaldo();
+    public Conta(ManipuladorSaldo manipuladorSaldo) {
+        this.manipuladorSaldo = manipuladorSaldo;
     }
 
     public double getSaldo() {
@@ -20,6 +20,6 @@ public class Conta {
     }
 
     public void render() {
-        manipuladorSaldo.render(0.05);
+        manipuladorSaldo.render();
     }
 }
