@@ -1,13 +1,13 @@
 package br.com.deisesales.isp;
 
-public class Vendedor extends Colaborador {
+public class Vendedor extends Colaborador implements Comissionavel{
 
     public Vendedor(String nome, String documento, int salario) {
         super(nome, documento, salario);
     }
 
     @Override
-    double getComissao() {
-        return super.getSalario() * 0.1;
+    public double getComissao() {
+        return getSalario() * 0.1; // 10% de comissão sobre o salário
     }
 }
